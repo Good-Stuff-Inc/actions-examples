@@ -1,0 +1,13 @@
+name: LIFX
+run-name: 💡
+on: workflow_dispatch
+env:
+  LIFX_AUTH: ${{ secrets.LIFX_AUTH }}
+  LIFX_BULB: ${{ secrets.LIFX_BULB }}
+jobs:
+  turn-lights-on:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Turn light on
+        run: ./.github/scripts/lifx.sh
+        shell: bash
