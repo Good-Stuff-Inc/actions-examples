@@ -9,5 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Turn light on
+      - uses: actions/checkout@v3
         run: ./.github/scripts/lifx.sh
         shell: bash
